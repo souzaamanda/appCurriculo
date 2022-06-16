@@ -12,6 +12,8 @@ import Icon from 'react-native-vector-icons/Feather';
 
 import foto from './assets/foto.png';
 
+import Card from './components/Card'
+
 const App = () => {
   function handleRedeSocial(rede_social) {
     switch (rede_social) {
@@ -46,45 +48,23 @@ const App = () => {
               <Icon name="telegram" size={30} />
             </TouchableOpacity>
           </View>
-        </View>
+        </View>  
 
-        <View style={style.card_container}>
-          <View style={style.card}>
-            <View style={style.card_header}>
-              <Text>Experiência Profissional</Text>
-            </View>
-            <View style={style.card_content}>
-              <Text style={style.card_container_text}>
-                Experiência Profissional
-              </Text>
-              <Text style={style.card_container_text}>
-                Experiência Profissional
-              </Text>
-              <Text style={style.card_container_text}>
-                Experiência Profissional
-              </Text>
-            </View>
-          </View>
-        </View>
+        <Card titulo='Formação Acadêmica'>
 
-        <View style={style.card_container}>
-          <View style={style.card}>
-            <View style={style.card_header}>
-              <Text>Formação Acadêmica</Text>
-            </View>
-            <View style={style.card_content}>
-              <Text style={style.card_container_text}>
-                Experiência Profissional
-              </Text>
-              <Text style={style.card_container_text}>
-                Experiência Profissional
-              </Text>
-              <Text style={style.card_container_text}>
-                Experiência Profissional
-              </Text>
-            </View>
-          </View>
-        </View>
+          <Text style={style.card_container_text}>formação 1</Text>
+          <Text style={style.card_container_text}>formação 2</Text>
+          <Text style={style.card_container_text}>formação 3</Text>
+
+        </Card>
+        <Card titulo='Experiencias Profissionais'>
+
+          <Text style={style.card_container_text}>trabalho 1</Text>
+          <Text style={style.card_container_text}>trabalho 2</Text>
+          <Text style={style.card_container_text}>trabalho 3</Text>
+
+        </Card>
+
       </View>
     </>
   );
@@ -118,23 +98,6 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '60%',
-    marginTop: 20,
-  },
-  card_container: {
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 20,
-  },
-  card: {
-    width: '60%',
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: '#939393',
-    padding: 10,
-    backgroundColor: '#FFF',
-  },
-  card_content: {
     marginTop: 20,
   },
   card_container_text: {
